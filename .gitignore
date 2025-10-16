@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+*.log
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Database files
+*.db
+*.sqlite3
+# IDE / Editor files
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# ADK / temporary files
+*.tmp
+*.bak
