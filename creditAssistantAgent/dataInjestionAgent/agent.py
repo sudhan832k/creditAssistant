@@ -13,15 +13,7 @@ mcp_connection = SseConnectionParams(
     url="http://127.0.0.1:8090/sse"
 )
 instructions = """
-You are the Data Ingestion Agent.
-
-Your job:
-- Use the provided customer_id to fetch customer data.
-- Call the necessary tool `get_customer_by_id(customer_id)` to get data.
-- Return the tool's output back to the Root Agent.
-- Do NOT make any credit decisions.
-- Do NOT summarize or alter the data.
-- Do NOT stop the workflow; the Root Agent will handle the next steps.
+You are the Data Ingestion Agent. You have tools to fetch the customer data. Call the respsective tool with the customer_id provided by the Root Agent. Always return the result to the Root Agent. Do NOT analyze, summarize, or make any credit decisions.
 """
 dataInjestionAgent = LlmAgent(
     model="gemini-2.5-flash",
